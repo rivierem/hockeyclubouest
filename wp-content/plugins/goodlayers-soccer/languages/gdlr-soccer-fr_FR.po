@@ -1,0 +1,1039 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Goodlayers Soccer v1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-02-24 17:22:43+0000\n"
+"Last-Translator: risk <rivierem.pro@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: framework/admin-option.php:19
+#@ gdlr-soccer
+msgid "Goodlayers Sidebar Option"
+msgstr ""
+
+#: framework/admin-option.php:29
+#@ gdlr-soccer
+msgid "Sidebar Layout"
+msgstr ""
+
+#: framework/admin-option.php:43
+#@ gdlr-soccer
+msgid "Left Sidebar"
+msgstr ""
+
+#: framework/admin-option.php:49
+#@ gdlr-soccer
+msgid "Right Sidebar"
+msgstr ""
+
+#: framework/admin-option.php:70
+#@ gdlr-soccer
+msgid "Soccer Style"
+msgstr ""
+
+#: framework/admin-option.php:73
+#@ gdlr_translate
+msgid "Single Player Title Background"
+msgstr ""
+
+#: framework/admin-option.php:79
+#@ gdlr_translate
+msgid "Player Sidebar Template"
+msgstr ""
+
+#: framework/admin-option.php:90
+#@ gdlr_translate
+msgid "Player Sidebar Left"
+msgstr ""
+
+#: framework/admin-option.php:96
+#@ gdlr_translate
+msgid "Player Sidebar Right"
+msgstr ""
+
+#: framework/admin-option.php:102
+#@ gdlr_translate
+msgid "Single Fixture & Result Title Background"
+msgstr ""
+
+#: framework/admin-option.php:108
+#@ gdlr_translate
+msgid "Fixtures & Results Sidebar Template"
+msgstr ""
+
+#: framework/admin-option.php:119
+#@ gdlr_translate
+msgid "Fixtures & Results Sidebar Left"
+msgstr ""
+
+#: framework/admin-option.php:125
+#@ gdlr_translate
+msgid "Fixtures & Results Sidebar Right"
+msgstr ""
+
+#: framework/fixtures-results-option.php:12
+#: framework/fixtures-results-option.php:24
+#: framework/fixtures-results-option.php:202
+#@ gdlr-soccer
+msgid "Fixtures & Results"
+msgstr ""
+
+#: framework/fixtures-results-option.php:13
+#@ gdlr-soccer
+msgid "Fixture & Result"
+msgstr ""
+
+#: framework/fixtures-results-option.php:14
+#: framework/league-table-option.php:14
+#: framework/player-option.php:14
+#@ gdlr-soccer
+msgid "Add New"
+msgstr ""
+
+#: framework/fixtures-results-option.php:15
+#@ gdlr-soccer
+msgid "Add New fixture & result"
+msgstr ""
+
+#: framework/fixtures-results-option.php:16
+#@ gdlr-soccer
+msgid "Edit fixture & result"
+msgstr ""
+
+#: framework/fixtures-results-option.php:17
+#@ gdlr-soccer
+msgid "New fixture & result"
+msgstr ""
+
+#: framework/fixtures-results-option.php:18
+#@ gdlr-soccer
+msgid "All fixtures & results"
+msgstr ""
+
+#: framework/fixtures-results-option.php:19
+#@ gdlr-soccer
+msgid "View fixture & result"
+msgstr ""
+
+#: framework/fixtures-results-option.php:20
+#@ gdlr-soccer
+msgid "Search fixtures & results"
+msgstr ""
+
+#: framework/fixtures-results-option.php:21
+#@ gdlr-soccer
+msgid "No fixtures & results found"
+msgstr ""
+
+#: framework/fixtures-results-option.php:22
+#@ gdlr-soccer
+msgid "No fixtures & results found in Trash"
+msgstr ""
+
+#: framework/fixtures-results-option.php:43
+#@ gdlr-soccer
+msgid "Result Categories"
+msgstr ""
+
+#: framework/fixtures-results-option.php:44
+#@ gdlr-soccer
+msgid "Result Category"
+msgstr ""
+
+#: framework/fixtures-results-option.php:80
+#@ gdlr-soccer
+msgid "Fixture & Result Option"
+msgstr ""
+
+#: framework/fixtures-results-option.php:95
+#@ gdlr-soccer
+msgid "Home Team"
+msgstr ""
+
+#: framework/fixtures-results-option.php:100
+#: framework/fixtures-results-option.php:112
+#@ gdlr-soccer
+msgid "Goal"
+msgstr ""
+
+#: framework/fixtures-results-option.php:104
+#: framework/fixtures-results-option.php:116
+#@ gdlr-soccer
+msgid "* Leave this field blank if the match hasn't start yet."
+msgstr ""
+
+#: framework/fixtures-results-option.php:107
+#@ gdlr-soccer
+msgid "Away Team"
+msgstr ""
+
+#: framework/fixtures-results-option.php:119
+#@ gdlr-soccer
+msgid "Date Of Match"
+msgstr ""
+
+#: framework/fixtures-results-option.php:123
+#@ gdlr-soccer
+msgid "Match Time"
+msgstr ""
+
+#: framework/fixtures-results-option.php:125
+#@ gdlr-soccer
+msgid "* have to be in HH:MM format"
+msgstr ""
+
+#: framework/fixtures-results-option.php:128
+#@ gdlr-soccer
+msgid "Location"
+msgstr ""
+
+#: framework/fixtures-results-option.php:136
+#@ gdlr-soccer
+msgid "Fixtures & Result"
+msgstr ""
+
+#: framework/fixtures-results-option.php:144
+#: include/fixture-result-item.php:210
+#@ gdlr-soccer
+msgid "Match Report"
+msgstr ""
+
+#: framework/fixtures-results-option.php:178
+#@ gdlr-soccer
+msgid "Upcoming Match"
+msgstr ""
+
+#: framework/fixtures-results-option.php:182
+#: framework/fixtures-results-option.php:206
+#: framework/league-table-option.php:183
+#: framework/player-option.php:418
+#@ gdlr-soccer
+msgid "Category"
+msgstr ""
+
+#: framework/fixtures-results-option.php:185
+#: framework/fixtures-results-option.php:209
+#: framework/fixtures-results-option.php:218
+#: framework/league-table-option.php:186
+#: framework/league-table-option.php:195
+#: framework/player-option.php:421
+#@ gdlr-soccer
+#@ gdlr-portfolio
+msgid "You can use Ctrl/Command button to select multiple categories or remove the selected category. <br><br> Leave this field blank to select all categories."
+msgstr ""
+
+#: framework/fixtures-results-option.php:188
+#@ gdlr_translate
+msgid "Background Image"
+msgstr ""
+
+#: framework/fixtures-results-option.php:190
+#@ gdlr_translate
+msgid "Upload"
+msgstr ""
+
+#: framework/fixtures-results-option.php:193
+#: framework/fixtures-results-option.php:256
+#: framework/league-table-option.php:215
+#: framework/player-option.php:490
+#@ gdlr-soccer
+msgid "Margin Bottom"
+msgstr ""
+
+#: framework/fixtures-results-option.php:196
+#: framework/fixtures-results-option.php:259
+#: framework/league-table-option.php:218
+#: framework/player-option.php:493
+#@ gdlr-soccer
+msgid "Spaces after ending of this item"
+msgstr ""
+
+#: framework/fixtures-results-option.php:212
+#@ gdlr-soccer
+msgid "Item Style"
+msgstr ""
+
+#: framework/fixtures-results-option.php:215
+#: framework/league-table-option.php:192
+#@ gdlr-soccer
+msgid "Full"
+msgstr ""
+
+#: framework/fixtures-results-option.php:216
+#: framework/league-table-option.php:193
+#@ gdlr-soccer
+msgid "Summary"
+msgstr ""
+
+#: framework/fixtures-results-option.php:221
+#@ gdlr-soccer
+msgid "View All Fixtures Text"
+msgstr ""
+
+#: framework/fixtures-results-option.php:223
+#@ gdlr-soccer
+msgid "View All Fixtures"
+msgstr ""
+
+#: framework/fixtures-results-option.php:227
+#@ gdlr-soccer
+msgid "View All Fixtures Link"
+msgstr ""
+
+#: framework/fixtures-results-option.php:232
+#: framework/player-option.php:432
+#@ gdlr-soccer
+msgid "Num Fetch"
+msgstr ""
+
+#: framework/fixtures-results-option.php:235
+#@ gdlr-soccer
+msgid "Specify the number of records you want to pull out."
+msgstr ""
+
+#: framework/fixtures-results-option.php:238
+#@ gdlr-soccer
+msgid "Enable Category Filter"
+msgstr ""
+
+#: framework/fixtures-results-option.php:241
+#@ gdlr-soccer
+msgid "*** You have to select only 1 ( or none ) category when enable this option"
+msgstr ""
+
+#: framework/fixtures-results-option.php:244
+#: framework/player-option.php:478
+#@ gdlr-soccer
+msgid "Order"
+msgstr ""
+
+#: framework/fixtures-results-option.php:247
+#: framework/player-option.php:481
+#@ gdlr-soccer
+msgid "Descending Order"
+msgstr ""
+
+#: framework/fixtures-results-option.php:248
+#: framework/player-option.php:482
+#@ gdlr-soccer
+msgid "Ascending Order"
+msgstr ""
+
+#: framework/fixtures-results-option.php:252
+#: framework/player-option.php:486
+#@ gdlr-soccer
+msgid "Enable Pagination"
+msgstr ""
+
+#: framework/league-table-option.php:12
+#: framework/league-table-option.php:13
+#: framework/league-table-option.php:179
+#@ gdlr-soccer
+msgid "League Table"
+msgstr ""
+
+#: framework/league-table-option.php:15
+#@ gdlr-soccer
+msgid "Add New league table"
+msgstr ""
+
+#: framework/league-table-option.php:16
+#@ gdlr-soccer
+msgid "Edit league table"
+msgstr ""
+
+#: framework/league-table-option.php:17
+#@ gdlr-soccer
+msgid "New league table"
+msgstr ""
+
+#: framework/league-table-option.php:18
+#@ gdlr-soccer
+msgid "All league tables"
+msgstr ""
+
+#: framework/league-table-option.php:19
+#@ gdlr-soccer
+msgid "View league table"
+msgstr ""
+
+#: framework/league-table-option.php:20
+#@ gdlr-soccer
+msgid "Search league tables"
+msgstr ""
+
+#: framework/league-table-option.php:21
+#@ gdlr-soccer
+msgid "No league table found"
+msgstr ""
+
+#: framework/league-table-option.php:22
+#@ gdlr-soccer
+msgid "No league table found in Trash"
+msgstr ""
+
+#: framework/league-table-option.php:24
+#@ gdlr-soccer
+msgid "League Tables"
+msgstr ""
+
+#: framework/league-table-option.php:45
+#@ gdlr-soccer
+msgid "League Categories"
+msgstr ""
+
+#: framework/league-table-option.php:46
+#@ gdlr-soccer
+msgid "League Category"
+msgstr ""
+
+#: framework/league-table-option.php:82
+#@ gdlr-soccer
+msgid "League Table Option"
+msgstr ""
+
+#: framework/league-table-option.php:101
+#@ gdlr-soccer
+msgid "Wins"
+msgstr ""
+
+#: framework/league-table-option.php:106
+#@ gdlr-soccer
+msgid "Draws"
+msgstr ""
+
+#: framework/league-table-option.php:111
+#@ gdlr-soccer
+msgid "Loses"
+msgstr ""
+
+#: framework/league-table-option.php:116
+#@ gdlr-soccer
+msgid "Goals Scored"
+msgstr ""
+
+#: framework/league-table-option.php:121
+#@ gdlr-soccer
+msgid "Goals Conceded"
+msgstr ""
+
+#: framework/league-table-option.php:131
+#: include/league-table-item.php:100
+#@ gdlr-soccer
+msgid "Home"
+msgstr ""
+
+#: framework/league-table-option.php:138
+#@ gdlr-soccer
+msgid "Always show in League Table (summary)"
+msgstr ""
+
+#: framework/league-table-option.php:147
+#: include/league-table-item.php:101
+#@ gdlr-soccer
+msgid "Away"
+msgstr ""
+
+#: framework/league-table-option.php:189
+#@ gdlr-soccer
+msgid "Table Style"
+msgstr ""
+
+#: framework/league-table-option.php:198
+#@ gdlr-soccer
+msgid "Display Number"
+msgstr ""
+
+#: framework/league-table-option.php:204
+#@ gdlr-soccer
+msgid "View Full Table Text"
+msgstr ""
+
+#: framework/league-table-option.php:206
+#@ gdlr-soccer
+msgid "View Full Table"
+msgstr ""
+
+#: framework/league-table-option.php:210
+#@ gdlr-soccer
+msgid "View Full Table Link"
+msgstr ""
+
+#: framework/player-option.php:12
+#: framework/player-option.php:24
+#@ gdlr-soccer
+msgid "Players"
+msgstr "Joueurs"
+
+#: framework/player-option.php:13
+#: framework/player-option.php:414
+#@ gdlr-soccer
+msgid "Player"
+msgstr "Joueur"
+
+#: framework/player-option.php:15
+#@ gdlr-soccer
+msgid "Add New player"
+msgstr "Ajouter un nouveau membre"
+
+#: framework/player-option.php:16
+#@ gdlr-soccer
+msgid "Edit player"
+msgstr "Modifier"
+
+#: framework/player-option.php:17
+#@ gdlr-soccer
+msgid "New player"
+msgstr "Nouveau"
+
+#: framework/player-option.php:18
+#@ gdlr-soccer
+msgid "All players"
+msgstr "Tous les membres"
+
+#: framework/player-option.php:19
+#@ gdlr-soccer
+msgid "View player"
+msgstr "Voir"
+
+#: framework/player-option.php:20
+#@ gdlr-soccer
+msgid "Search players"
+msgstr "Rechercher"
+
+#: framework/player-option.php:21
+#@ gdlr-soccer
+msgid "No players found"
+msgstr "Aucun membre trouvé"
+
+#: framework/player-option.php:22
+#@ gdlr-soccer
+msgid "No players found in Trash"
+msgstr "Aucun membre trouvé dans la corbeille"
+
+#: framework/player-option.php:44
+#@ gdlr-soccer
+msgid "Player Categories"
+msgstr "Catégories de joueurs"
+
+#: framework/player-option.php:45
+#@ gdlr-soccer
+msgid "Player Category"
+msgstr "Catégorie de joueurs"
+
+#: framework/player-option.php:81
+#@ gdlr-soccer
+msgid "Player Option"
+msgstr "Option du joueur"
+
+#: framework/player-option.php:96
+#@ gdlr-soccer
+msgid "Player Info"
+msgstr "Informations joueur"
+
+#: framework/player-option.php:99
+#@ gdlr-soccer
+msgid "General Info"
+msgstr "Informations générales"
+
+#: framework/player-option.php:103
+#@ gdlr-soccer
+msgid "First Name"
+msgstr "Prénom"
+
+#: framework/player-option.php:107
+#@ gdlr-soccer
+msgid "Last Name"
+msgstr "Nom"
+
+#: framework/player-option.php:111
+#@ gdlr-soccer
+msgid "Squad"
+msgstr "Équipe"
+
+#: framework/player-option.php:115
+#: include/player-item.php:25
+#@ gdlr-soccer
+msgid "Position"
+msgstr "Position"
+
+#: framework/player-option.php:119
+#@ gdlr-soccer
+msgid "Position (abbreviation)"
+msgstr "Abréviation de la position"
+
+#: framework/player-option.php:123
+#: include/player-item.php:23
+#@ gdlr-soccer
+msgid "Nationality"
+msgstr "Nationalité"
+
+#: framework/player-option.php:127
+#: include/player-item.php:24
+#@ gdlr-soccer
+msgid "Date Of Birth"
+msgstr "Date de naissance"
+
+#: framework/player-option.php:131
+#@ gdlr-soccer
+msgid "Hieght"
+msgstr "Taille"
+
+#: framework/player-option.php:135
+#: include/player-item.php:22
+#@ gdlr-soccer
+msgid "Weight"
+msgstr "Poids"
+
+#: framework/player-option.php:139
+#: include/player-item.php:26
+#@ gdlr-soccer
+msgid "Games Played"
+msgstr "Matchs joués"
+
+#: framework/player-option.php:143
+#: include/player-item.php:27
+#@ gdlr-soccer
+msgid "Minutes Played"
+msgstr "Minutes jouées"
+
+#: framework/player-option.php:147
+#: include/player-item.php:28
+#@ gdlr-soccer
+msgid "Starts"
+msgstr ""
+
+#: framework/player-option.php:151
+#: include/player-item.php:29
+#@ gdlr-soccer
+msgid "Substitution On"
+msgstr ""
+
+#: framework/player-option.php:155
+#: include/player-item.php:30
+#@ gdlr-soccer
+msgid "Substitution Off"
+msgstr ""
+
+#: framework/player-option.php:160
+#@ gdlr-soccer
+msgid "Social Media"
+msgstr ""
+
+#: framework/player-option.php:165
+#@ gdlr-soccer
+msgid "Facebook"
+msgstr ""
+
+#: framework/player-option.php:169
+#@ gdlr-soccer
+msgid "Twitter"
+msgstr ""
+
+#: framework/player-option.php:173
+#@ gdlr-soccer
+msgid "Youtube"
+msgstr ""
+
+#: framework/player-option.php:177
+#@ gdlr-soccer
+msgid "Instagram"
+msgstr ""
+
+#: framework/player-option.php:183
+#: single-player.php:57
+#@ gdlr-soccer
+msgid "Player Stats"
+msgstr ""
+
+#: framework/player-option.php:186
+#: single-player.php:117
+#@ gdlr-soccer
+msgid "General"
+msgstr ""
+
+#: framework/player-option.php:190
+#: include/player-item.php:32
+#@ gdlr-soccer
+msgid "Passes"
+msgstr ""
+
+#: framework/player-option.php:194
+#: include/player-item.php:33
+#@ gdlr-soccer
+msgid "Passing Accuracy"
+msgstr ""
+
+#: framework/player-option.php:198
+#: include/player-item.php:34
+#@ gdlr-soccer
+msgid "Passing Accuracy opp. Half"
+msgstr ""
+
+#: framework/player-option.php:202
+#: include/player-item.php:35
+#@ gdlr-soccer
+msgid "Duels Won"
+msgstr ""
+
+#: framework/player-option.php:206
+#: include/player-item.php:36
+#@ gdlr-soccer
+msgid "Duels Lost"
+msgstr ""
+
+#: framework/player-option.php:210
+#: include/player-item.php:37
+#@ gdlr-soccer
+msgid "Duels Won (%)"
+msgstr ""
+
+#: framework/player-option.php:214
+#: include/player-item.php:38
+#@ gdlr-soccer
+msgid "Aerial Duels Won"
+msgstr ""
+
+#: framework/player-option.php:218
+#: include/player-item.php:39
+#@ gdlr-soccer
+msgid "Aerial Duels Lost"
+msgstr ""
+
+#: framework/player-option.php:222
+#: include/player-item.php:40
+#@ gdlr-soccer
+msgid "Aerial Duels Won (%)"
+msgstr ""
+
+#: framework/player-option.php:226
+#: include/player-item.php:41
+#@ gdlr-soccer
+msgid "Recoveries"
+msgstr ""
+
+#: framework/player-option.php:231
+#@ gdlr-soccer
+msgid "Defence & Descipline"
+msgstr ""
+
+#: framework/player-option.php:236
+#: include/player-item.php:43
+#@ gdlr-soccer
+msgid "Tackles Won"
+msgstr ""
+
+#: framework/player-option.php:240
+#: include/player-item.php:44
+#@ gdlr-soccer
+msgid "Tackles Lost"
+msgstr ""
+
+#: framework/player-option.php:244
+#: include/player-item.php:45
+#@ gdlr-soccer
+msgid "Tackles Won (%)"
+msgstr ""
+
+#: framework/player-option.php:248
+#: include/player-item.php:46
+#@ gdlr-soccer
+msgid "Clearances"
+msgstr ""
+
+#: framework/player-option.php:252
+#: include/player-item.php:47
+#@ gdlr-soccer
+msgid "Blocks"
+msgstr ""
+
+#: framework/player-option.php:256
+#: include/player-item.php:48
+#@ gdlr-soccer
+msgid "Interceptions"
+msgstr ""
+
+#: framework/player-option.php:260
+#: include/player-item.php:49
+#@ gdlr-soccer
+msgid "Penalties Conceded"
+msgstr ""
+
+#: framework/player-option.php:264
+#: include/player-item.php:50
+#@ gdlr-soccer
+msgid "Fouls Won"
+msgstr ""
+
+#: framework/player-option.php:268
+#: include/player-item.php:51
+#@ gdlr-soccer
+msgid "Fouls Conceded"
+msgstr ""
+
+#: framework/player-option.php:272
+#: include/player-item.php:52
+#@ gdlr-soccer
+msgid "Yellow Cards"
+msgstr ""
+
+#: framework/player-option.php:276
+#: include/player-item.php:53
+#@ gdlr-soccer
+msgid "Red Cards"
+msgstr ""
+
+#: framework/player-option.php:281
+#: single-player.php:121
+#@ gdlr-soccer
+msgid "Attack"
+msgstr ""
+
+#: framework/player-option.php:286
+#: include/player-item.php:55
+#@ gdlr-soccer
+msgid "Goals"
+msgstr ""
+
+#: framework/player-option.php:290
+#: include/player-item.php:56
+#@ gdlr-soccer
+msgid "Penalty Goals"
+msgstr ""
+
+#: framework/player-option.php:294
+#: include/player-item.php:57
+#@ gdlr-soccer
+msgid "Minutes Per Goal"
+msgstr ""
+
+#: framework/player-option.php:298
+#: include/player-item.php:58
+#@ gdlr-soccer
+msgid "Total Shots On Target"
+msgstr ""
+
+#: framework/player-option.php:302
+#: include/player-item.php:59
+#@ gdlr-soccer
+msgid "Total Shots Off Target"
+msgstr ""
+
+#: framework/player-option.php:306
+#: include/player-item.php:60
+#@ gdlr-soccer
+msgid "Shooting Accuracy"
+msgstr ""
+
+#: framework/player-option.php:310
+#: include/player-item.php:61
+#@ gdlr-soccer
+msgid "Successful Crosses"
+msgstr ""
+
+#: framework/player-option.php:314
+#: include/player-item.php:62
+#@ gdlr-soccer
+msgid "Unsuccessful Crosses"
+msgstr ""
+
+#: framework/player-option.php:318
+#: include/player-item.php:63
+#@ gdlr-soccer
+msgid "Successful Crosses (%)"
+msgstr ""
+
+#: framework/player-option.php:322
+#: include/player-item.php:64
+#@ gdlr-soccer
+msgid "Assists"
+msgstr ""
+
+#: framework/player-option.php:326
+#: include/player-item.php:65
+#@ gdlr-soccer
+msgid "Chances Created"
+msgstr ""
+
+#: framework/player-option.php:330
+#: include/player-item.php:66
+#@ gdlr-soccer
+msgid "Penalties Won"
+msgstr ""
+
+#: framework/player-option.php:334
+#: include/player-item.php:67
+#@ gdlr-soccer
+msgid "Offsides"
+msgstr ""
+
+#: framework/player-option.php:340
+#: single-player.php:59
+#@ gdlr-soccer
+msgid "Biography"
+msgstr ""
+
+#: framework/player-option.php:348
+#: single-player.php:61
+#@ gdlr-soccer
+msgid "Gallery"
+msgstr ""
+
+#: framework/player-option.php:424
+#@ gdlr-soccer
+msgid "Player Style"
+msgstr ""
+
+#: framework/player-option.php:427
+#@ gdlr-soccer
+msgid "Classic Style"
+msgstr ""
+
+#: framework/player-option.php:428
+#@ gdlr-soccer
+msgid "Modern Style"
+msgstr ""
+
+#: framework/player-option.php:435
+#@ gdlr-soccer
+msgid "Specify the number of player items you want to pull out."
+msgstr ""
+
+#: framework/player-option.php:438
+#@ gdlr-soccer
+msgid "Player Item Size"
+msgstr ""
+
+#: framework/player-option.php:449
+#@ gdlr-soccer
+msgid "Player Layout Order"
+msgstr ""
+
+#: framework/player-option.php:452
+#@ gdlr-soccer
+msgid "FitRows ( Order items by row )"
+msgstr ""
+
+#: framework/player-option.php:453
+#@ gdlr-soccer
+msgid "Carousel ( Only For Grid And Modern Style )"
+msgstr ""
+
+#: framework/player-option.php:457
+#@ gdlr-soccer
+msgid "Enable Player Filter"
+msgstr ""
+
+#: framework/player-option.php:460
+#@ gdlr-soccer
+msgid "*** You have to select only 1 ( or none ) player category when enable this option"
+msgstr ""
+
+#: framework/player-option.php:463
+#@ gdlr-soccer
+msgid "Thumbnail Size"
+msgstr ""
+
+#: framework/player-option.php:466
+#@ gdlr-soccer
+msgid "Only effects to <strong>standard and gallery post format</strong>"
+msgstr ""
+
+#: framework/player-option.php:469
+#@ gdlr-soccer
+msgid "Order By"
+msgstr ""
+
+#: framework/player-option.php:472
+#@ gdlr-soccer
+msgid "Publish Date"
+msgstr ""
+
+#: framework/player-option.php:473
+#@ gdlr-soccer
+msgid "Title"
+msgstr ""
+
+#: framework/player-option.php:474
+#@ gdlr-soccer
+msgid "Random"
+msgstr ""
+
+#: include/fixture-result-item.php:85
+#: include/player-item.php:130
+#@ gdlr-soccer
+msgid "All"
+msgstr ""
+
+#: include/fixture-result-item.php:199
+#: include/fixture-result-item.php:238
+#: include/fixture-result-item.php:300
+#@ gdlr-soccer
+msgid "VS"
+msgstr ""
+
+#: include/league-table-item.php:102
+#@ gdlr-soccer
+msgid "Overall"
+msgstr ""
+
+#: include/league-table-item.php:105
+#@ gdlr-soccer
+msgid "Pos"
+msgstr ""
+
+#: include/league-table-item.php:105
+#: include/league-table-item.php:131
+#@ gdlr-soccer
+msgid "Team"
+msgstr ""
+
+#: include/player-item.php:21
+#@ gdlr-soccer
+msgid "Height"
+msgstr ""
+
+#: include/utility.php:38
+#@ gdlr_translate
+msgid "Learn More"
+msgstr ""
+
+#: include/utility.php:55
+#@ gdlr-lms
+msgid "None"
+msgstr ""
+
+#: include/utility.php:133
+#@ gdlr_translate
+msgid "&lsaquo; Previous"
+msgstr ""
+
+#: include/utility.php:134
+#@ gdlr_translate
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: include/utility.php:155
+#@ gdlr_translate
+msgid "full size (Original Images)"
+msgstr ""
+
+#: single-player.php:119
+#@ gdlr-soccer
+msgid "Defence & Discipline"
+msgstr ""
+
