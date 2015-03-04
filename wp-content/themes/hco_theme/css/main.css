@@ -1,0 +1,124 @@
+/* CSS DOCUMENT */
+
+.parternaire_wrapper {
+	background: #e7e7e7;
+	border-bottom: 4px solid #e1e1e1;
+	margin-bottom: 40px;
+	padding: 40px 20px;
+}
+
+.parternaire_wrapper .gdlr-button {
+	float: right;
+}
+
+/* AGENDA */
+
+.event_wrapper {
+	background: #e7e7e7;
+	border-bottom: 4px solid #e0e0e0;
+	padding: 40px;
+	margin-bottom: 40px;
+}
+
+
+.event_title {
+	font-weight: bold;
+}
+
+.event_single {
+	color: #f99405;
+}
+
+.event_single .desc { margin: 20px 0 0 0;}
+
+.event_infos {
+	background: rgba(0,0,0,0.8) #000;
+	padding: 0 20px;
+	color: #FFF!important;
+}
+
+.desc { text-align: justify;}
+
+.date, .tarif {
+	padding: 5px 40px;
+	margin: 0 20px;
+	width: 100%;
+	height: 50px;
+	background: #f99405;
+	color: #fff;
+	font-weight: bold;
+}
+
+p.adresse { border-left: 2px solid #e7e7e7; padding-left: 20px;}
+p.contact { border-left: 2px solid #e7e7e7; padding-left: 20px;}
+
+.hidden { display: none;}
+
+/* JOUEURS */
+
+.circular-img {
+	border-radius: 50%;
+	border: 4px solid #f99405;
+	background: #fff;
+}
+.joueur_wrapper {
+	margin-bottom: 30px;
+}
+.joueur_wrapper .entete h3 {
+	margin: 0;
+}
+
+h4.poste_joueur {
+	line-height: 80%;
+
+}
+
+.player_wrapper { 
+	/*background: rgba(0,0,0,0.6);*/
+	margin-bottom: 80px;
+	padding-top: 20px;
+}
+
+.player_wrapper:hover { background : rgba(0,0,0,0.6);}
+.player_wrapper:hover h4 { color: #fff;}
+
+.center { text-align: center; margin: 0; }
+
+.player_wrapper h3 { color: #f99405;}
+
+.infos {
+	border-bottom: 4px solid #f99405;
+	margin: 0 10px;
+	padding-bottom: 30px;
+	/*background: orange;*/
+	/*color: #fff;*/
+	/*padding: 20px 10px;*/
+}
+
+.mixit .mix{
+    opacity: 0;
+    display: none;
+}
+
+#filter-list {
+	padding: 0 15px;
+	margin: 20px 0;
+}
+
+#filter-list li.filter {
+	display: inline;
+	padding: 10px 20px;
+	margin: 0;
+	background: #f99405;
+	cursor: pointer;
+	color: #fff;
+}
+
+#filter-list li.filter:hover {
+	background: #cb8a0c;
+}
+
+#filter-list li.filter.active {
+	font-weight: bold;
+	background: #cb8a0c;
+}

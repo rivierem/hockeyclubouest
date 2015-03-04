@@ -1,3 +1,8 @@
+<?php
+/**
+*	Template Name: Règlement
+*/
+ ?>
 <?php get_header(); ?>
 
 	<div class="gdlr-content">
@@ -25,3 +30,5 @@
 		</div>
 	</div><!-- gdlr-content -->
 <?php get_footer(); ?>
+
+<a href="http://mathieuriviere.com" title="Mathieu Rivière - Développeur Web">Mathieu Rivière</a>

@@ -1,10 +1,42 @@
-<?php // Add Shortcode
+<?php
+
+add_image_size( 'blog', '1200px', '400px', true );
+
+/* Modify the read more link on the_excerpt() */
+
+function et_excerpt_length($length) {
+    return 55;
+}
+add_filter('excerpt_length', 'et_excerpt_length');
+
+// Register style sheet.
+add_action( 'wp_enqueue_scripts', 'register_hco_style' );
+
+/**
+ * Register stylesheets.
+ */
+function register_hco_style() {
+    wp_register_style( 'main', get_stylesheet_directory_uri().'/css/main.css' );
+    wp_enqueue_style( 'main' );
+}
+
+/**
+ * Register scripts.
+ */
+add_action( 'wp_enqueue_scripts', 'register_hco_scripts' );
+function register_hco_scripts() {
+    if(is_page('equipes')){
+        wp_enqueue_script('mixitup', get_stylesheet_directory_uri() . '/js/filter/jquery.mixitup.min.js', array( 'jquery' ));
+    }
+}
+
+// Add Shortcode
 function hco_display_map() {
 
-	// Code
-return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD9XhgzePkoJM8uF_vdTQQfgCs&sensor=false&extension=.js'></script> 
- 
-<script> 
+// Code
+return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD9XhgzePkoJM8uF_vdTQQfgCs&sensor=false&extension=.js'></script>
+
+<script>
     google.maps.event.addDomListener(window, 'load', init);
     var map;
     function init() {
@@ -34,27 +66,27 @@ return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD
         var mapElement = document.getElementById('map_hco');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-							['Gymnase de Saint-Paul',
-							 'Hello World',
-							 'undefined',
-							 'undefined',
-							 'undefined',
-							 -20.9982668,
-							 55.28018529999997,
-							 'https://mapbuildr.com/assets/img/markers/default.png'],
-							['Siège du club',
-							 'undefined',
-							 'undefined',
-							 'undefined',
-							 'undefined',
-							 -20.9967352,
-							 55.28449869999997,
-							 'https://mapbuildr.com/assets/img/markers/default.png']
-        				];
+              ['Gymnase de Saint-Paul',
+               'Hello World',
+               '0262229612',
+               'arf@arf.com',
+               'http://mathieuriviere.com',
+               -20.9982668,
+               55.28018529999997,
+               'http://localhost/websites/hockeyclubouest/wp-content/uploads/hockey_marker.png'],
+              ['Siège du club',
+               'hellooo',
+               '0262443509',
+               'arf@loop.com',
+               'http://mathieuriviere.fr',
+               -20.9967352,
+               55.28449869999997,
+               'http://localhost/websites/hockeyclubouest/wp-content/uploads/marker_hco.png']
+                ];
         for (i = 0; i < locations.length; i++) {
-			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
            if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
            if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
             marker = new google.maps.Marker({
@@ -67,7 +99,38 @@ return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD
                 email: email,
                 web: web
             });
-link = '';     }
+            if (web.substring(0, 7) != 'http://') {
+                link = 'http://' + web;
+            } else {
+                link = web;
+            }
+            bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+        }
+    function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+      var infoWindowVisible = (function () {
+              var currentlyVisible = false;
+              return function (visible) {
+                  if (visible !== undefined) {
+                      currentlyVisible = visible;
+                  }
+                  return currentlyVisible;
+               };
+           }());
+           iw = new google.maps.InfoWindow();
+           google.maps.event.addListener(marker, 'click', function() {
+               if (infoWindowVisible()) {
+                   iw.close();
+                   infoWindowVisible(false);
+               } else {
+                   var html= '<div style=\"color:#000;background-color:#fff;padding:5px;width:150px;\"><h4>'+title+'</h4><p>'+desc+'<p><p>'+telephone+'<p><a href=\"mailto:'+email+'\" >'+email+'<a><a href=\"'+link+'\" >'+web+'<a></div>';
+                   iw = new google.maps.InfoWindow({content:html});
+                   iw.open(map,marker);
+                   infoWindowVisible(true);
+               }
+        });
+        google.maps.event.addListener(iw, 'closeclick', function () {
+            infoWindowVisible(false);
+        });
 
 }
 </script>
@@ -75,6 +138,7 @@ link = '';     }
     #map_hco {
         height:400px;
         width:100%;
+        border: 1px solid red;
     }
     .gm-style-iw * {
         display: block;
@@ -150,10 +214,147 @@ add_action( 'init', 'hco_partenaire', 0 );
 }
 
 
+/**
+ * Agenda
+ */
 
+if ( ! function_exists('add_event_cpt') ) {
 
+// Register Custom Post Type
+function add_event_cpt() {
 
+    $labels = array(
+        'name'                => _x( 'Évènements', 'Post Type General Name', 'hco' ),
+        'singular_name'       => _x( 'Évènement', 'Post Type Singular Name', 'hco' ),
+        'menu_name'           => __( 'Agenda', 'hco' ),
+        'parent_item_colon'   => __( 'Parent :', 'hco' ),
+        'all_items'           => __( 'Tous les évènements', 'hco' ),
+        'view_item'           => __( 'Voir la fiche', 'hco' ),
+        'add_new_item'        => __( 'Ajouter un évènement', 'hco' ),
+        'add_new'             => __( 'Ajouter', 'hco' ),
+        'edit_item'           => __( 'Modifier', 'hco' ),
+        'update_item'         => __( 'Mettre à jour', 'hco' ),
+        'search_items'        => __( 'Rechercher', 'hco' ),
+        'not_found'           => __( 'Aucun résultat', 'hco' ),
+        'not_found_in_trash'  => __( 'Aucun résultat dans la corbeille', 'hco' ),
+    );
+    $args = array(
+        'label'               => __( 'evenement', 'hco' ),
+        'description'         => __( 'Matchs, Soirées, etc', 'hco' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+        'taxonomies'          => array( 'cat_evenement' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+    register_post_type( 'evenement', $args );
 
+}
 
+// Hook into the 'init' action
+add_action( 'init', 'add_event_cpt', 0 );
 
+}
+
+/**
+ * 
+ */
+
+if ( ! function_exists('register_hco_players') ) {
+
+// Register Custom Post Type
+function register_hco_players() {
+
+    $labels = array(
+        'name'                => _x( 'Joueurs', 'Post Type General Name', 'hco' ),
+        'singular_name'       => _x( 'Joueur', 'Post Type Singular Name', 'hco' ),
+        'menu_name'           => __( 'Joueurs', 'hco' ),
+        'parent_item_colon'   => __( 'Parent : ', 'hco' ),
+        'all_items'           => __( 'Tous', 'hco' ),
+        'view_item'           => __( 'Voir la fiche', 'hco' ),
+        'add_new_item'        => __( 'Ajouter un joueur', 'hco' ),
+        'add_new'             => __( 'Ajouter', 'hco' ),
+        'edit_item'           => __( 'Modifier', 'hco' ),
+        'update_item'         => __( 'Mettre à jour', 'hco' ),
+        'search_items'        => __( 'Rechercher', 'hco' ),
+        'not_found'           => __( 'Aucun résultat', 'hco' ),
+        'not_found_in_trash'  => __( 'Aucun résultat dans la corbeill', 'hco' ),
+    );
+    $args = array(
+        'label'               => __( 'joueurs', 'hco' ),
+        'description'         => __( 'Joueurs du club HCO', 'hco' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'thumbnail', ),
+        'taxonomies'          => array( 'cat_joueur' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+    register_post_type( 'joueurs', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'register_hco_players', 0 );
+
+}
+
+if ( ! function_exists( 'register_joueurs_cat' ) ) {
+
+// Register Custom Taxonomy
+function register_joueurs_cat() {
+
+    $labels = array(
+        'name'                       => _x( 'Catégories', 'Taxonomy General Name', 'hco' ),
+        'singular_name'              => _x( 'Catégorie', 'Taxonomy Singular Name', 'hco' ),
+        'menu_name'                  => __( 'Catégories', 'hco' ),
+        'all_items'                  => __( 'Toutes les catégories', 'hco' ),
+        'parent_item'                => __( 'Parent :', 'hco' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'hco' ),
+        'new_item_name'              => __( 'Nouveau', 'hco' ),
+        'add_new_item'               => __( 'Nouvelle catégorie', 'hco' ),
+        'edit_item'                  => __( 'Modifier', 'hco' ),
+        'update_item'                => __( 'Mise à jour', 'hco' ),
+        'separate_items_with_commas' => __( 'Séparer avec des virgules', 'hco' ),
+        'search_items'               => __( 'Rechercher', 'hco' ),
+        'add_or_remove_items'        => __( 'Ajouter ou Retirer', 'hco' ),
+        'choose_from_most_used'      => __( 'Choisir dans les plus utilisés', 'hco' ),
+        'not_found'                  => __( 'Aucun résultat', 'hco' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'cat_joueur', array( 'joueurs' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'register_joueurs_cat', 0 );
+
+}
  ?>

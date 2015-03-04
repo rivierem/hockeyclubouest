@@ -50,6 +50,18 @@
 	</footer>
 	<?php } // page style ?>
 </div> <!-- body-wrapper -->
+<?php 
+// Page Portfolio
+if(is_page('equipes')){
+	echo "
+	<script type='text/javascript'>
+		jQuery(function(){
+			jQuery('.mixit').mixitup();
+		});
+	</script>
+	";
+}
+ ?>
 <?php wp_footer(); ?>
 </body>
 </html>
