@@ -1,7 +1,7 @@
 /* CSS DOCUMENT */
 
 .parternaire_wrapper {
-	background: #e7e7e7;
+	/*background: #e7e7e7;*/
 	border-bottom: 4px solid #e1e1e1;
 	margin-bottom: 40px;
 	padding: 40px 20px;
@@ -10,20 +10,42 @@
 .parternaire_wrapper .gdlr-button {
 	float: right;
 }
+.parternaire_wrapper img { width: 120px;}
 
 /* AGENDA */
 
 .event_wrapper {
-	background: #e7e7e7;
+	/*background: #e7e7e7;*/
 	border-bottom: 4px solid #e0e0e0;
+	border-left: 4px solid #e0e0e0;
 	padding: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
+
+	-webkit-border-bottom-left-radius: 50px;
+-moz-border-radius-bottomleft: 50px;
+border-bottom-left-radius: 50px;
 }
 
 
 .event_title {
 	font-weight: bold;
+
 }
+.titre_agenda {
+	font-size: 40pt;
+}
+
+.infos_agenda {
+	margin-bottom: 40px;
+}
+
+.infos_agenda span {
+	background: #f99405; padding: 5px 20px; margin: 0 2px; color: #fff; font-weight: bold; font-size: 17pt;
+}
+
+/*.infos_agenda .tarif { padding: 20px 20px;}*/
+
+
 
 .event_single {
 	color: #f99405;
@@ -34,7 +56,7 @@
 .event_infos {
 	background: rgba(0,0,0,0.8) #000;
 	padding: 0 20px;
-	color: #FFF!important;
+	/*color: #FFF!important;*/
 }
 
 .desc { text-align: justify;}
@@ -52,7 +74,20 @@
 p.adresse { border-left: 2px solid #e7e7e7; padding-left: 20px;}
 p.contact { border-left: 2px solid #e7e7e7; padding-left: 20px;}
 
-.hidden { display: none;}
+.square_date { 
+	background: #f99405; 
+	padding: 20px; color: #fff; font-size: 40pt; font-weight: bold; text-align: center; line-height: 80%; 
+	/*border-radius: 50%;*/
+}
+.square_date p { margin:0;}
+.square_date span {
+	font-size: 20pt;
+}
+
+.square_date .debut { padding: 48px 0;}
+.square_date .debut_fin { padding: 10px 0; }
+
+
 
 /* JOUEURS */
 
@@ -122,3 +157,20 @@ h4.poste_joueur {
 	font-weight: bold;
 	background: #cb8a0c;
 }
+
+.ms-parent-id-1 { /* Fix Top of slider */
+	top: -88px;
+}
+
+.parternaire_banner {
+	overflow: visible!important;
+}
+
+/* PAGINATION */
+
+.pagination_link { padding: 10px; margin: 20px 0; float: right; font-size: 18pt;}
+.page-numbers { background: #f99405; padding: 10px; color: #fff; font-weight: bold; }
+.page-numbers:hover { background: #cb8a0c; color: #fff;}
+.page-numbers.current { background: #ffa800;}
+.next-page-numbers {}
+.previous-page-numbers {}

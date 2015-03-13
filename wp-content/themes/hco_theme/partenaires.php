@@ -9,6 +9,10 @@
 		<div class="section-container container">
 			<div class="twelve columns">
 				<!-- <h2><?php the_title(); ?></h2> -->
+				<?php if (have_posts()) {
+					the_post();
+					the_content();
+				} ?>
 				<?php
 				//Custom query for partenaires
 				$args = array (
@@ -22,7 +26,9 @@
 						<?php
 
 						if(has_post_thumbnail()){
-							the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+							the_post_thumbnail( 'thumbnail',  array( 'class' => 'alignleft'));
+						} else {
+							echo '<img class="alignleft" src="http://localhost/websites/hockeyclubouest/wp-content/uploads/user_profile_pic-150x150.png" height="42" width="42" alt="">';
 						}
 
 						?>

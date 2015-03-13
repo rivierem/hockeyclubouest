@@ -5,6 +5,7 @@
 	*	This file contains functions that manage the media in the theme
 	*	---------------------------------------------------------------------
 	*/	
+	$ret ='';
 
 	// use for getting the video from link / shortcode
 	if( !function_exists('gdlr_get_video_item') ){

@@ -1,4 +1,10 @@
-
+# BEGIN iThemes Security
+	# BEGIN Hide Backend
+			# Rules to hide the dashboard
+			RewriteRule ^(/websites/hockeyclubouest/)?hcologin/?$ /websites/hockeyclubouest/wp-login.php [QSA,L]
+		
+	# END Hide Backend
+# END iThemes Security
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On

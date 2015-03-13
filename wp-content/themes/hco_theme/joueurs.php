@@ -8,9 +8,7 @@
 	<div class="gdlr-content">
 		<div class="section-container container">
 			<div class="twelve columns">
-				<!-- <h2><?php the_title(); ?></h2> -->
 				<?php
-				//Custom query for partenaires
 				$args = array (
 					'post_type'              => 'joueurs',
 					'order'					 => 'ASC',
@@ -54,17 +52,7 @@
 						</a>
 						<div class="infos">
 							<?php
-							// $sexe = get_field('sexe');
-							// $date_de_naissance = get_field('date_de_naissance');
 							$poste = get_field('poste');
-							// if($sexe){
-							// 	echo 'Genre : '.$sexe;
-							// }
-							// echo '<br />';
-							// if($date_de_naissance){
-							// 	echo 'Date de naissance : '.$date_de_naissance;
-							// }
-							// echo '<br />';
 							if($poste){
 								echo '<h4 class="center">'.$poste.'</h4>';
 							}

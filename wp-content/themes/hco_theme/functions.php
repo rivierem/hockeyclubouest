@@ -30,10 +30,16 @@ function register_hco_scripts() {
     }
 }
 
+
+
+add_image_size( 'logo', 150, 150, true );
+
+
+
 // Add Shortcode
 function hco_display_map() {
 
-// Code
+    // Code
 return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD9XhgzePkoJM8uF_vdTQQfgCs&sensor=false&extension=.js'></script>
 
 <script>
@@ -66,27 +72,29 @@ return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD
         var mapElement = document.getElementById('map_hco');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-              ['Gymnase de Saint-Paul',
-               'Hello World',
-               '0262229612',
-               'arf@arf.com',
-               'http://mathieuriviere.com',
-               -20.9982668,
-               55.28018529999997,
-               'http://localhost/websites/hockeyclubouest/wp-content/uploads/hockey_marker.png'],
-              ['Siège du club',
-               'hellooo',
-               '0262443509',
-               'arf@loop.com',
-               'http://mathieuriviere.fr',
-               -20.9967352,
-               55.28449869999997,
-               'http://localhost/websites/hockeyclubouest/wp-content/uploads/marker_hco.png']
-                ];
+                            ['Gymnase de Saint-Paul',
+                            'Hello World',
+                            '0262229612',
+                            'arf@arf.com',
+                            'http://mathieuriviere.com',
+                            -20.9982668,
+                            55.28018529999997,
+                            'http://localhost/websites/hockeyclubouest/wp-content/uploads/hockey_marker.png'
+                            ],
+                            ['Siège du club',
+                             'Description',
+                             'Tél. : 02 62 XX XX XX',
+                             'E-mail : hello@world.fr',
+                             'http://hockeyclubouest.fr',
+                             -20.9967352,
+                             55.28449869999997,
+                             'http://localhost/websites/hockeyclubouest/wp-content/uploads/marker_hco.png'
+                            ]
+                        ];
         for (i = 0; i < locations.length; i++) {
-      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+            if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+            if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+            if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
            if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
            if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
             marker = new google.maps.Marker({
@@ -107,30 +115,32 @@ return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD
             bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
         }
     function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
-      var infoWindowVisible = (function () {
-              var currentlyVisible = false;
-              return function (visible) {
-                  if (visible !== undefined) {
-                      currentlyVisible = visible;
-                  }
-                  return currentlyVisible;
-               };
-           }());
-           iw = new google.maps.InfoWindow();
-           google.maps.event.addListener(marker, 'click', function() {
-               if (infoWindowVisible()) {
-                   iw.close();
-                   infoWindowVisible(false);
-               } else {
-                   var html= '<div style=\"color:#000;background-color:#fff;padding:5px;width:150px;\"><h4>'+title+'</h4><p>'+desc+'<p><p>'+telephone+'<p><a href=\"mailto:'+email+'\" >'+email+'<a><a href=\"'+link+'\" >'+web+'<a></div>';
-                   iw = new google.maps.InfoWindow({content:html});
-                   iw.open(map,marker);
-                   infoWindowVisible(true);
-               }
-        });
-        google.maps.event.addListener(iw, 'closeclick', function () {
-            infoWindowVisible(false);
-        });
+    var infoWindowVisible = (function () {
+          var currentlyVisible = false;
+          return function (visible) {
+              if (visible !== undefined) {
+                  currentlyVisible = visible;
+              }
+              return currentlyVisible;
+           };
+    }());
+    iw = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker, 'click', function() {
+        if (infoWindowVisible()) {
+           iw.close();
+           infoWindowVisible(false);
+        } else {
+           var html= '<div style=\"color:#000;background-color:#fff;padding:5px;width:150px;\"><h4>'+title+'</h4><p>'+desc+'<p><p>'+telephone+'<p><a href=\"mailto:'+email+'\" >'+email+'<a><a href=\"'+link+'\" >'+web+'<a></div>';
+           iw = new google.maps.InfoWindow({content:html});
+           iw.open(map,marker);
+           infoWindowVisible(true);
+        }
+    });
+
+    google.maps.event.addListener(iw, 'closeclick', function () {
+        infoWindowVisible(false);
+    });
+}
 
 }
 </script>
@@ -138,7 +148,6 @@ return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD
     #map_hco {
         height:400px;
         width:100%;
-        border: 1px solid red;
     }
     .gm-style-iw * {
         display: block;
@@ -152,14 +161,17 @@ return "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNX-nMMD
         color: #4272db;
     }
 </style>
-
+<div class='gdlr-shortcode-wrapper'>
+    <div class='gdlr-item-title-wrapper gdlr-item pos-left '>
+        <div class='gdlr-item-title-head container'>
+            <h3 class='gdlr-item-title gdlr-skin-title gdlr-skin-border'>Nous situer sur la carte</h3>
+            <div class='clear'></div>
+        </div>
+    </div>
+</div>
 <div id='map_hco'></div>";
 }
 add_shortcode( 'display-map', 'hco_display_map' );
-
-
-
-
 
 
 /**
@@ -198,6 +210,7 @@ function hco_partenaire() {
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
         'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-businessman',
         'can_export'          => true,
         'has_archive'         => false,
         'exclude_from_search' => false,
@@ -251,6 +264,7 @@ function add_event_cpt() {
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
         'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-calendar-alt',
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
@@ -267,7 +281,7 @@ add_action( 'init', 'add_event_cpt', 0 );
 }
 
 /**
- * 
+ *
  */
 
 if ( ! function_exists('register_hco_players') ) {
@@ -303,6 +317,7 @@ function register_hco_players() {
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
         'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-groups',
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
@@ -357,4 +372,93 @@ function register_joueurs_cat() {
 add_action( 'init', 'register_joueurs_cat', 0 );
 
 }
+
+
+/**
+ * Shortcode Partenaire Accueil
+ *
+ */
+function loop_partenaires(){
+    $args = array (
+        'post_type'              => 'partenaire',
+        'order'                  => 'ASC'
+    );
+    $p_query = new WP_Query( $args );
+
+    if($p_query->have_posts()) : ?>
+    <h3>Nos partenaires</h3>
+    <div class="gdlr-color-wrapper  gdlr-show-all no-skin" style="background-color: #f3f3f3; padding-bottom: 20px; ">
+            <div class="container">
+                <div class="gdlr-banner-item-wrapper">
+                    <div class="gdlr-banner-images gdlr-item">
+                        <div class="flexslider" data-pausetime="7000" data-slidespeed="600" data-effect="fade" data-columns="5" data-type="carousel" data-nav-container="gdlr-banner-images">
+                            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                <ul class="slides" style="width: 1400%; margin-left: -456px;">
+
+                                <?php while($p_query->have_posts()) : $p_query->the_post();
+                                    $url_site = get_field('site_web'); ?>
+                                    <li style="width: 198px; float: left; display: block;">
+                                        <a href="<?php echo $url_site; ?>">
+                                        <?php if(has_post_thumbnail()){ the_post_thumbnail('thumbnail'); } ?>
+                                        </a>
+                                    </li>
+                                <?php endwhile; else : echo 'Nothing'; endif; ?>
+
+                                </ul>
+                            </div>
+                            <ul class="flex-direction-nav">
+                                <li>
+                                    <a class="flex-prev" href="#">
+                                        <i class="icon-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="flex-next" href="#">
+                                        <i class="icon-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+<?php
+}
+
+function display_partenaires(){
+    loop_partenaires();
+}
+add_shortcode( 'display-partenaires', 'display_partenaires' );
+
+
+//Custom excerpt
+function my_excerpt($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    } 
+    $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+    echo $excerpt;
+}
+
+function my_content($limit) {
+    $content = explode(' ', get_the_content(), $limit);
+    if (count($content)>=$limit) {
+        array_pop($content);
+        $content = implode(" ",$content).'...';
+    } else {
+        $content = implode(" ",$content);
+    } 
+    $content = preg_replace('/\[.+\]/','', $content);
+    $content = apply_filters('the_content', $content); 
+    $content = str_replace(']]>', ']]&gt;', $content);
+    echo $content;
+}
+
  ?>
